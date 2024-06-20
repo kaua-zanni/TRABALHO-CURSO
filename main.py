@@ -4,10 +4,8 @@ from modelos.link_produto import Link_produto
 from modelos.suporte import Suporte
 from modelos.usuarios.usuario import usuario
 def main():
-    """Demonstrates the usage of classes from different modules."""
-
     
-    free_customer = ClienteFree('nome','15','email','99564826583')
+    free_customer = ClienteFree('𝖓𝖔𝖒𝖊','15','email','99564826583')
     premium_customer = Cliente_premium(["Desconto", "Entrega rápida"], 50.00,'nome','15','email','99564826583')
     produto_link = Link_produto(
         "https://www.kabum.com.br/produto/238671/console-playstation-5-sony-ssd-825gb-controle-sem-fio-dualsense-com-midia-fisica-branco-1214a", "Produto A", 
@@ -17,17 +15,19 @@ def main():
     )
 
     support = Suporte("example@email.com", "1234567890", "Suporte ao cliente")
-    login = usuario('nome','idade',"user@example.com",'telefone')
+    login = usuario('𝖓𝖔𝖒𝖊','𝖎𝖉𝖆𝖉𝖊',"user@example.com",'telefone')
 
     
     print("-" * 30)
     print("Free Customer:")
     print(free_customer)
     free_customer.informacao_plano_free()
+    free_customer.login_bem_sucedido()
     print("-" * 30)
     print("Premium Customer:")
     print(premium_customer)
     premium_customer.obter_beceficios_premium()
+    premium_customer.login_bem_sucedido()
     print("-" * 30)
     print("Product Link:")
     print(produto_link)
